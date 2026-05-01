@@ -7,7 +7,6 @@ app.use (express.json());
 app.get('/',(req,res) => {
    console.log("got a request ");
    
-    
 })
 
 app.listen(PORT,()=>{
