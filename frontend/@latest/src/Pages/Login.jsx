@@ -1,5 +1,5 @@
 import React from "react";
-import { Trophy, User, Mail, PlayCircle } from "lucide-react";
+import { Trophy, User, Mail, PlayCircle, UserKey } from "lucide-react";
 
 const Login = () => {
   return (
@@ -36,10 +36,11 @@ const Login = () => {
 
             {/* Email/Pass Input */}
             <div className="relative group">
-              <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-[#ccff00] group-focus-within:scale-110 transition-transform" size={20} />
+                
+              <UserKey  className="absolute left-4 top-1/2 -translate-y-1/2 text-[#ccff00] group-focus-within:scale-110 transition-transform" size={20} />
               <input
-                type="email"
-                placeholder="Email Address"
+                type="password"
+                placeholder="Enter Your Password"
                 className="w-full py-4 pl-12 pr-4 bg-[#0a1a0a] text-white border-2 border-transparent focus:border-[#ccff00] outline-none rounded-2xl transition-all placeholder:text-white/30"
               />
             </div>
