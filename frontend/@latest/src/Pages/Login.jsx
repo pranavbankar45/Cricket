@@ -1,24 +1,67 @@
 import React from "react";
+import { Trophy, User, Mail, PlayCircle } from "lucide-react";
 
 const Login = () => {
-  return <div className="text-2xl text-red-500 h-screen w-screen flex items-center justify-center ">
-    <div className="bg-[#657a00] w-[30%] h-[50%]">
-        <div className="mx-10 my-10  rounded-2xl flex flex-col gap-15">
-
-            <input type="text " placeholder="Enter Your Name " 
-            className="py-2 px-4  bg-[#1400c6] 0 text-gold border-none outline-none rounded-2xl m-"/>
-
-            <input type="text " placeholder="Enter Your Name " 
-            className="py-2 px-4 bg-[#1400c6] text-gold border-none outline-none rounded-2xl "/>
-
-            <button type="text " placeholder="Enter Your Name "  type="submit"
-            className="py-2 px-4 self-center bg-[#1400c6] text-gold border-none outline-none rounded-2xl  inline w-fit">Login & Signup</button>
-
+  return (
+    <div className="h-screen w-screen flex items-center justify-center bg-[#0a2e0a] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#1a4d1a] to-[#051a05] font-sans">
+      {/* Main Stadium Card */}
+      <div className="bg-[#1e3a1e] border-4 border-[#ccff00] w-full max-w-md p-8 rounded-[3rem] shadow-[0_0_50px_rgba(204,255,0,0.2)] relative overflow-hidden">
+        
+        {/* Playful Cricket Decoration */}
+        <div className="absolute -top-6 -right-6 opacity-20 rotate-12">
+          <Trophy size={120} color="#ccff00" />
         </div>
-    </div>
-    
-  </div>;
-};
 
+        <div className="flex flex-col items-center gap-8 relative z-10">
+          {/* Header */}
+          <div className="text-center">
+            <h1 className="text-4xl font-black text-[#ccff00] italic tracking-tighter uppercase leading-none">
+              The Pavilion
+            </h1>
+            <p className="text-white/60 text-sm mt-2 font-medium uppercase tracking-widest">
+              Ready for your next innings?
+            </p>
+          </div>
+
+          <div className="w-full flex flex-col gap-5">
+            {/* Name Input */}
+            <div className="relative group">
+              <User className="absolute left-4 top-1/2 -translate-y-1/2 text-[#ccff00] group-focus-within:scale-110 transition-transform" size={20} />
+              <input
+                type="text"
+                placeholder="Player Name"
+                className="w-full py-4 pl-12 pr-4 bg-[#0a1a0a] text-white border-2 border-transparent focus:border-[#ccff00] outline-none rounded-2xl transition-all placeholder:text-white/30"
+              />
+            </div>
+
+            {/* Email/Pass Input */}
+            <div className="relative group">
+              <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-[#ccff00] group-focus-within:scale-110 transition-transform" size={20} />
+              <input
+                type="email"
+                placeholder="Email Address"
+                className="w-full py-4 pl-12 pr-4 bg-[#0a1a0a] text-white border-2 border-transparent focus:border-[#ccff00] outline-none rounded-2xl transition-all placeholder:text-white/30"
+              />
+            </div>
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              className="mt-4 py-4 px-8 self-center bg-[#e63946] hover:bg-[#ff4d5a] text-white font-bold text-lg rounded-2xl transition-all transform hover:scale-105 active:scale-95 shadow-[0_5px_0_rgb(150,30,40)] hover:shadow-[0_2px_0_rgb(150,30,40)] flex items-center gap-3 group"
+            >
+              Step onto the Field
+              <PlayCircle className="group-hover:translate-x-1 transition-transform" size={22} />
+            </button>
+          </div>
+
+          {/* Footer tagline */}
+          <p className="text-[#ccff00]/50 text-xs font-bold uppercase tracking-tighter">
+            Join 1M+ Players Worldwide
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Login;
