@@ -1,5 +1,5 @@
-import React from "react";
-import { Trophy, User, Mail, PlayCircle, UserKey } from "lucide-react";
+
+import { Trophy, User, PlayCircle, UserKey } from "lucide-react";
 
 const Login = () => {
   return (
