@@ -1,9 +1,11 @@
 
 import { useEffect } from 'react';
 import './App.css'
+import 
 // import Login from "./Pages/Login.tsx"
 // import Profile from "./Pages/Profile."
-import CreateProfile from "./Pages/CreateProfile.tsx"
+ CreateProfile from "./Pages/CreateProfile.tsx"
+import Login from './Pages/Login.tsx';
 function App() {
 
   async function test(){
@@ -17,6 +19,8 @@ function App() {
     console.log("res",res);
   }
 
+
+
   useEffect(()=>{
     test();
   },[])
@@ -26,7 +30,8 @@ function App() {
     <div className='w-screen flex justify-center items-center '>
       {/* <Login/> */}
       {/* <Profile/> */}
-      <CreateProfile/>
+      <Login/>
+      {/* <CreateProfile/> */}
     </div>
     </>
   )
